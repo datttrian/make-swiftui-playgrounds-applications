@@ -8,19 +8,40 @@
 import SwiftUI
 
 struct ContentView: View {
-    let thing = 5 + 3 * 2
+    //    let thing = 5 + 3 * 2
+    //    var body: some View {
+    //        let thing2 = thing + 5
+    //        let myMax = "\(max(thing, thing2))"
+    //        VStack {
+    //            Text("Hello, Pizza!").font(.largeTitle).bold()
+    //            Image(systemName: "\(thing).square")
+    //                .imageScale(.large)
+    //                .foregroundColor(.red).font(.title)
+    //            Text("Hello, \(thing2)!")
+    //            Text(myMax.appending(" is bigger")).bold()
+    //            Spacer()
+    //        }
+    //    }
     var body: some View {
-        let thing2 = thing + 5
-        let myMax = "\(max(thing, thing2))"
         VStack {
-            Text("Hello, Pizza!").font(.largeTitle).bold()
-            Image(systemName: "\(thing).square")
+            Text("Huli Pizza Company")
+                .font(.largeTitle).bold()
+            Image(systemName: "rectangle.fill")
                 .imageScale(.large)
-                .foregroundColor(.red).font(.title)
-            Text("Hello, \(thing2)!")
-            Text(myMax.appending(" is bigger")).bold()
+                .font(.largeTitle)
+                .foregroundColor(Color.black)
+            Divider()
+            HStack {
+                Image(systemName: "circle.fill")
+                VStack(alignment:.leading) {
+                    Text("Menu Item")
+                    Text("Menu Description")
+                }
+                Spacer()
+            }
             Spacer()
         }
+        .background(Color.green)
     }
 }
 
