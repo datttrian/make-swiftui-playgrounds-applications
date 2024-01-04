@@ -8,38 +8,40 @@
 import SwiftUI
 
 struct ContentView: View {
-    //    let thing = 5 + 3 * 2
-    //    var body: some View {
-    //        let thing2 = thing + 5
-    //        let myMax = "\(max(thing, thing2))"
-    //        VStack {
-    //            Text("Hello, Pizza!").font(.largeTitle).bold()
-    //            Image(systemName: "\(thing).square")
-    //                .imageScale(.large)
-    //                .foregroundColor(.red).font(.title)
-    //            Text("Hello, \(thing2)!")
-    //            Text(myMax.appending(" is bigger")).bold()
-    //            Spacer()
-    //        }
-    //    }
+    func pizzaSize(size:Double) -> String {
+        if size >= 25 {return "X-Large"}
+        if size >= 18 {return "Large"}
+        if size >= 12 {return "Medium"}
+        return "Small"
+    }
+    func pizzaOrderText(size:Double) -> Text {
+        Text(pizzaSize(size: size) + " Pizza")
+    }
+    var menu = MenuModel(item1: testMenuItem1, item2: testMenuItem2)
+    var bannerImage:String = surfgirl
+    var color = Color.green
+    var title:String
     var body: some View {
         VStack {
-            Text("Huli Pizza Company")
+            Text(title)
                 .font(.largeTitle).bold()
-            Image("SurfGirl1")
+            pizzaOrderText(size: 17).font(.largeTitle)
+            Image(bannerImage)
                 .resizable()
                 .scaledToFit()
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding()
             Divider()
-            MenuItemView().padding(.leading)
-            MenuItemView().padding(.leading)
+            MenuItemView(imageName: testMenuItem1.name)
+            MenuItemView(imageName: testMenuItem2.name)
+            MenuItemView(imageName: menu.item1.name, isTitle: true, isVertical: true).padding(.leading)
+            MenuItemView(imageName: menu.item2.name).padding(.leading)
             Spacer()
         }
-        .background(Color.green)
+        .background(color)
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(title: companyName)
 }
