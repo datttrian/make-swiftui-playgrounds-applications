@@ -9,17 +9,13 @@ import SwiftUI
 
 struct MenuItemView: View {
     var imageName:String = pizzaImg
+    var isTitle = false
+    var isVertical = false
     var body: some View {
-        HStack {
-            Image(imageName)
-                .resizable()
-                .frame(maxWidth: 150, maxHeight: 150)
-                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-            VStack(alignment:.leading) {
-                Text("Menu Item")
-                Text("Menu Description")
-            }
-            Spacer()
+        if isVertical {
+            VMenuItemView(imageName: imageName, isTitle: isTitle)
+        } else {
+            HMenuItemView(imageName: imageName, isTitle: isTitle)
         }
     }
 }
