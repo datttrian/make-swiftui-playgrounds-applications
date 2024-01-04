@@ -11,12 +11,15 @@ struct ContentView: View {
     let thing = 5 + 3 * 2
     var body: some View {
         let thing2 = thing + 5
+        let myMax = "\(max(thing, thing2))"
         VStack {
-            Text("Hello, Pizza!")
-            Image(systemName: "\(thing - 1).square")
+            Text("Hello, Pizza!").font(.largeTitle).bold()
+            Image(systemName: "\(thing).square")
                 .imageScale(.large)
-                .foregroundColor(.accentColor)
+                .foregroundColor(.red).font(.title)
             Text("Hello, \(thing2)!")
+            Text(myMax.appending(" is bigger")).bold()
+            Spacer()
         }
     }
 }
