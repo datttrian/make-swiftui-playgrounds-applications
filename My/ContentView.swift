@@ -31,14 +31,8 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .foregroundColor(Color.black)
             Divider()
-            HStack {
-                Image(systemName: "circle.fill")
-                VStack(alignment:.leading) {
-                    Text("Menu Item")
-                    Text("Menu Description")
-                }
-                Spacer()
-            }
+            MenuItemView()
+            MenuItemView()
             Spacer()
         }
         .background(Color.green)
