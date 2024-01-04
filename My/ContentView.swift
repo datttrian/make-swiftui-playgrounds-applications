@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    let thing = 5 + 3 * 2
     var body: some View {
+        let thing2 = thing + 5
         VStack {
             Text("Hello, Pizza!")
-            Image(systemName: "guitars")
+            Image(systemName: "\(thing - 1).square")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Hello, guitars!")
+            Text("Hello, \(thing2)!")
         }
     }
 }
