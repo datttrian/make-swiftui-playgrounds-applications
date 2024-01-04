@@ -17,7 +17,7 @@ struct VMenuItemView: View {
                 .frame(maxWidth: 150, maxHeight: 150)
                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
             HStack {
-                Text("Menu Item")
+                Text(imageName)
                     .font(isTitle ? .title2 : .headline)
                 if !isTitle {
                     Text("Menu Description")
