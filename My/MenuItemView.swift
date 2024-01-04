@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct MenuItemView: View {
+    var imageName:String = pizzaImg
     var body: some View {
         HStack {
-            Image("Pizza")
+            Image(imageName)
                 .resizable()
                 .frame(maxWidth: 150, maxHeight: 150)
                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)

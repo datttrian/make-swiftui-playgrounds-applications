@@ -8,25 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    //    let thing = 5 + 3 * 2
-    //    var body: some View {
-    //        let thing2 = thing + 5
-    //        let myMax = "\(max(thing, thing2))"
-    //        VStack {
-    //            Text("Hello, Pizza!").font(.largeTitle).bold()
-    //            Image(systemName: "\(thing).square")
-    //                .imageScale(.large)
-    //                .foregroundColor(.red).font(.title)
-    //            Text("Hello, \(thing2)!")
-    //            Text(myMax.appending(" is bigger")).bold()
-    //            Spacer()
-    //        }
-    //    }
+    var bannerImage:String = surfgirl
+    var color = Color.green
+    var title:String 
     var body: some View {
         VStack {
-            Text("Huli Pizza Company")
+            Text(title)
                 .font(.largeTitle).bold()
-            Image("SurfGirl1")
+            Image(bannerImage)
                 .resizable()
                 .scaledToFit()
                 .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -34,12 +23,13 @@ struct ContentView: View {
             Divider()
             MenuItemView().padding(.leading)
             MenuItemView().padding(.leading)
+            MenuItemView(imageName: bannerImage).padding(.leading)
             Spacer()
         }
-        .background(Color.green)
+        .background(color)
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(title: companyName)
 }

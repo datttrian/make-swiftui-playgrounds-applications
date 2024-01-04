@@ -12,6 +12,7 @@
 		DA8E90282B4646F200F6F524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8E90272B4646F200F6F524 /* Assets.xcassets */; };
 		DA8E902B2B4646F200F6F524 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8E902A2B4646F200F6F524 /* Preview Assets.xcassets */; };
 		DA8E90332B464FD000F6F524 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8E90322B464FD000F6F524 /* MenuItemView.swift */; };
+		DA8E90352B46574B00F6F524 /* GlobalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8E90342B46574B00F6F524 /* GlobalSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		DA8E902A2B4646F200F6F524 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA8E902C2B4646F200F6F524 /* My.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = My.entitlements; sourceTree = "<group>"; };
 		DA8E90322B464FD000F6F524 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
+		DA8E90342B46574B00F6F524 /* GlobalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				DA8E90232B4646F100F6F524 /* MyApp.swift */,
 				DA8E90252B4646F100F6F524 /* ContentView.swift */,
+				DA8E90342B46574B00F6F524 /* GlobalSettings.swift */,
 				DA8E90322B464FD000F6F524 /* MenuItemView.swift */,
 				DA8E90272B4646F200F6F524 /* Assets.xcassets */,
 				DA8E902C2B4646F200F6F524 /* My.entitlements */,
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA8E90262B4646F100F6F524 /* ContentView.swift in Sources */,
+				DA8E90352B46574B00F6F524 /* GlobalSettings.swift in Sources */,
 				DA8E90332B464FD000F6F524 /* MenuItemView.swift in Sources */,
 				DA8E90242B4646F100F6F524 /* MyApp.swift in Sources */,
 			);
