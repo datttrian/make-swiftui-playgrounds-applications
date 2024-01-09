@@ -39,18 +39,7 @@ struct ContentView: View {
             }
             .padding(5)
             .background(.red, in: RoundedRectangle(cornerRadius: 5))
-            HStack {
-                ForEach(pizzaSizes, id:\.self) { size in
-                    Button(pizzaSizeText(size: size)) {
-                        pizzaSize = size
-                    }
-                    .font(.headline)
-                    .padding(3)
-                    .background(
-                        .white, in: RoundedRectangle(cornerRadius: 3)
-                    )
-                }
-            }
+            SizeView(pizzaSize: $pizzaSize)
             Divider()
             ScrollView(.horizontal) {
                 HStack {

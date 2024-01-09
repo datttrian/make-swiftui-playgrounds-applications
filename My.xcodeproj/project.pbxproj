@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DA42AF282B4CD87F003FFFB7 /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42AF272B4CD87F003FFFB7 /* RatingsView.swift */; };
 		DA42AF2A2B4CE05C003FFFB7 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42AF292B4CE05C003FFFB7 /* MenuModel.swift */; };
+		DA42AF552B4CF4AD003FFFB7 /* SizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42AF542B4CF4AD003FFFB7 /* SizeView.swift */; };
 		DA8E90242B4646F100F6F524 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8E90232B4646F100F6F524 /* MyApp.swift */; };
 		DA8E90262B4646F100F6F524 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8E90252B4646F100F6F524 /* ContentView.swift */; };
 		DA8E90282B4646F200F6F524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8E90272B4646F200F6F524 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		DA42AF272B4CD87F003FFFB7 /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
 		DA42AF292B4CE05C003FFFB7 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		DA42AF542B4CF4AD003FFFB7 /* SizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeView.swift; sourceTree = "<group>"; };
 		DA8E90202B4646F100F6F524 /* My.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = My.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8E90232B4646F100F6F524 /* MyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
 		DA8E90252B4646F100F6F524 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				DA8E90362B465B5900F6F524 /* HMenuItemView.swift */,
 				DA8E90382B465B8900F6F524 /* VMenuItemView.swift */,
 				DA8E90342B46574B00F6F524 /* GlobalSettings.swift */,
+				DA42AF542B4CF4AD003FFFB7 /* SizeView.swift */,
 				DA8E90322B464FD000F6F524 /* MenuItemView.swift */,
 				DA8E90272B4646F200F6F524 /* Assets.xcassets */,
 				DA8E902C2B4646F200F6F524 /* My.entitlements */,
@@ -171,6 +174,7 @@
 				DA42AF2A2B4CE05C003FFFB7 /* MenuModel.swift in Sources */,
 				DA8E90262B4646F100F6F524 /* ContentView.swift in Sources */,
 				DA8E90392B465B8900F6F524 /* VMenuItemView.swift in Sources */,
+				DA42AF552B4CF4AD003FFFB7 /* SizeView.swift in Sources */,
 				DA8E90352B46574B00F6F524 /* GlobalSettings.swift in Sources */,
 				DA8E903B2B46618000F6F524 /* MenuItem.swift in Sources */,
 				DA8E90332B464FD000F6F524 /* MenuItemView.swift in Sources */,
