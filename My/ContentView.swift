@@ -9,15 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     
-    func pizzaOrderText(size:Double) -> Text {
-        Text(pizzaSizeText(size: size) + " Pizza")
+    func pizzaOrderText(size:PizzaSize) -> Text {
+        Text(size.rawValue + " Pizza")
     }
     var menu = MenuModel().menu
     var bannerImage:String = surfgirl
     var color = Color.green
     var title:String
     @State var isSmall:Bool = true
-    @State var pizzaSize:Double = 10
+    @State var pizzaSize:PizzaSize = .small
     var body: some View {
         VStack {
             Text(title)

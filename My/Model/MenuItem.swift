@@ -7,13 +7,21 @@
 
 import SwiftUI
 
-func pizzaSizeText(size:Double) -> String {
-    if size >= 25 {return "X-Large"}
-    if size >= 18 {return "Large"}
-    if size >= 12 {return "Medium"}
-    return "Small"
+//func pizzaSizeText(size:Double) -> String {
+//    if size >= 25 {return "X-Large"}
+//    if size >= 18 {return "Large"}
+//    if size >= 12 {return "Medium"}
+//    return "Small"
+//}
+
+//let pizzaSizes:[Double] = [10, 12 ,18, 25]
+
+enum PizzaSize: String, CaseIterable {
+    case small = "Small"
+    case medium = "Medium"
+    case large = "Large"
+    case xlarge = "X-Large"
 }
-let pizzaSizes:[Double] = [10, 12 ,18, 25]
 
 struct MenuItem: Identifiable {
     var id:Int
@@ -41,7 +49,6 @@ let testMenuItem1 = MenuItem(
 )
 
 let testMenuItem2 = MenuItem(id: 2, name: "Pepperoni", price: 9.00)
-
 class OldMenuModel {
     var menu: [MenuItem] = [
         testMenuItem1,

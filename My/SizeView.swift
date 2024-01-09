@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct SizeView: View {
-    @Binding var pizzaSize:Double
+    @Binding var pizzaSize:PizzaSize
+    
     var body: some View {
         HStack {
-            ForEach(pizzaSizes, id:\.self) { size in
-                Button(pizzaSizeText(size: size)) {
+            ForEach(PizzaSize.allCases, id:\.self) { size in
+                Button(size.rawValue) {
                     pizzaSize = size
                 }
                 .font(.headline)
@@ -26,5 +27,5 @@ struct SizeView: View {
 }
 
 #Preview {
-    SizeView(pizzaSize: .constant(10))
+    SizeView(pizzaSize: .constant(.small))
 }
