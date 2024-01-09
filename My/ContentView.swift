@@ -32,10 +32,9 @@ struct ContentView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding()
             Divider()
-            MenuItemView(item: menu[0])
-            MenuItemView(item: menu[1])
-            MenuItemView(item: menu[0], isTitle: true, isVertical: true).padding(.leading)
-            MenuItemView(item: menu[1]).padding(.leading)
+            ForEach(menu, id: \.self) { item in
+                MenuItemView(item: item, isTitle: false, isVertical: false)
+            }
             Spacer()
         }
         .background(color)

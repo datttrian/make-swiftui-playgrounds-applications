@@ -19,6 +19,7 @@ struct HMenuItemView: View {
                 .frame(maxWidth: 150, maxHeight: 150)
                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
             VStack(alignment:.leading) {
+                RatingsView(rating: 4)
                 Text(item.name)
                     .font(isTitle ? .title2 : .headline)
                 if !isTitle {
