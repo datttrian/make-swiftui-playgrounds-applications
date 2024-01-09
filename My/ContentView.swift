@@ -21,16 +21,29 @@ struct ContentView: View {
     var bannerImage:String = surfgirl
     var color = Color.green
     var title:String
+    @State var isSmall:Bool = true
     var body: some View {
         VStack {
             Text(title)
-                .font(.largeTitle).bold()
-            pizzaOrderText(size: 17).font(.largeTitle)
-            Image(bannerImage)
-                .resizable()
-                .scaledToFit()
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-                .padding()
+                .font(isSmall ? .title2 : .largeTitle).bold()
+            pizzaOrderText(size: 17).font(isSmall ? .headline: .title3)
+            
+            if !isSmall {
+                Image(bannerImage)
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .padding(10)
+            }
+            
+            Button {
+                isSmall.toggle()
+            } label: {
+                Text(isSmall ? "isSmall" : "isBig")
+            }
+            .padding(5)
+            .background(.red, in: RoundedRectangle(cornerRadius: 5))
+            
             Divider()
             ScrollView(.horizontal) {
                 HStack {
