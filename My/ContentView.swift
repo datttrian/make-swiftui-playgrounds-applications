@@ -32,9 +32,27 @@ struct ContentView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding()
             Divider()
-            ForEach(menu) { item in
-                MenuItemView(item: item, isTitle: false, isVertical: false)
+            ScrollView(.horizontal) {
+                HStack {
+                    ForEach(menu) { item in
+                        Image(item.thumbnailName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(maxHeight: 40)
+                            .padding(3)
+                    }
+                }
             }
+            
+            List {
+                Text("Menu")
+                    .font(.title)
+                    .bold()
+                ForEach(menu) { item in
+                    MenuItemView(item: item, isTitle: false, isVertical: false)
+                }
+            }
+            
             Spacer()
         }
         .background(color)
