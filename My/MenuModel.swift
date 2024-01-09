@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MenuItem {
+struct MenuItem: Identifiable {
     var id:Int
     var name:String
     var price:Double
