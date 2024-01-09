@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct MenuItem {
+    var id:Int
     var name:String
     var price:Double
 }
 
-let testMenuItem1 = MenuItem(name: "Cheese", price: 7.00)
-let testMenuItem2 = MenuItem(name: "Pepperoni", price: 9.00)
+let testMenuItem1 = MenuItem(id: 1, name: "Cheese", price: 7.00)
+let testMenuItem2 = MenuItem(id: 2, name: "Pepperoni", price: 9.00)
 
 class MenuModel {
     var item1: MenuItem

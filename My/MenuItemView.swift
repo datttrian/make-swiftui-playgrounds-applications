@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct MenuItemView: View {
-    var imageName:String = pizzaImg
+    //    var imageName:String = pizzaImg
+    var item:MenuItem
     var isTitle = false
     var isVertical = false
     var body: some View {
         if isVertical {
-            VMenuItemView(imageName: imageName, isTitle: isTitle)
+            VMenuItemView(item: item, isTitle: isTitle)
         } else {
-            HMenuItemView(imageName: imageName, isTitle: isTitle)
+            HMenuItemView(item: item, isTitle: isTitle)
         }
     }
 }
 
 #Preview {
-    MenuItemView()
+    MenuItemView(item: testMenuItem1)
 }
