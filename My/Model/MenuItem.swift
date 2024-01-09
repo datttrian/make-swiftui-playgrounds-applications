@@ -14,7 +14,10 @@ struct MenuItem: Identifiable {
     var description:String = "Description here"
     var rating:Int = 3
     var imageName: String {
-        return "\(id).circle"
+        return "\(id)_lg"
+    }
+    var thumbnailName: String {
+        return "\(id)_sm"
     }
     var formattedPrice:String {
         price.formatted(.currency(code: "USD"))
