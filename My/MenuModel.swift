@@ -23,11 +23,8 @@ let testMenuItem1 = MenuItem(id: 1, name: "Cheese", price: 7.00)
 let testMenuItem2 = MenuItem(id: 2, name: "Pepperoni", price: 9.00)
 
 class MenuModel {
-    var item1: MenuItem
-    var item2: MenuItem
-    
-    init(item1: MenuItem, item2: MenuItem) {
-        self.item1 = item1
-        self.item2 = item2
-    }
+    var menu: [MenuItem] = [
+        testMenuItem1,
+        testMenuItem2
+    ]
 }

@@ -17,7 +17,7 @@ struct ContentView: View {
     func pizzaOrderText(size:Double) -> Text {
         Text(pizzaSize(size: size) + " Pizza")
     }
-    var menu = MenuModel(item1: testMenuItem1, item2: testMenuItem2)
+    var menu = MenuModel().menu
     var bannerImage:String = surfgirl
     var color = Color.green
     var title:String
@@ -32,10 +32,10 @@ struct ContentView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding()
             Divider()
-            MenuItemView(item: menu.item1)
-            MenuItemView(item: menu.item2)
-            MenuItemView(item: menu.item1, isTitle: true, isVertical: true).padding(.leading)
-            MenuItemView(item: menu.item2).padding(.leading)
+            MenuItemView(item: menu[0])
+            MenuItemView(item: menu[1])
+            MenuItemView(item: menu[0], isTitle: true, isVertical: true).padding(.leading)
+            MenuItemView(item: menu[1]).padding(.leading)
             Spacer()
         }
         .background(color)
