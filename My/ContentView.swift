@@ -8,25 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    func pizzaSize(size:Double) -> String {
-        if size >= 25 {return "X-Large"}
-        if size >= 18 {return "Large"}
-        if size >= 12 {return "Medium"}
-        return "Small"
-    }
+    
     func pizzaOrderText(size:Double) -> Text {
-        Text(pizzaSize(size: size) + " Pizza")
+        Text(pizzaSizeText(size: size) + " Pizza")
     }
     var menu = MenuModel().menu
     var bannerImage:String = surfgirl
     var color = Color.green
     var title:String
     @State var isSmall:Bool = true
+    @State var pizzaSize:Double = 10
     var body: some View {
         VStack {
             Text(title)
                 .font(isSmall ? .title2 : .largeTitle).bold()
-            pizzaOrderText(size: 17).font(isSmall ? .headline: .title3)
+            pizzaOrderText(size: pizzaSize).font(isSmall ? .headline: .title3)
             
             if !isSmall {
                 Image(bannerImage)
@@ -43,7 +39,18 @@ struct ContentView: View {
             }
             .padding(5)
             .background(.red, in: RoundedRectangle(cornerRadius: 5))
-            
+            HStack {
+                ForEach(pizzaSizes, id:\.self) { size in
+                    Button(pizzaSizeText(size: size)) {
+                        pizzaSize = size
+                    }
+                    .font(.headline)
+                    .padding(3)
+                    .background(
+                        .white, in: RoundedRectangle(cornerRadius: 3)
+                    )
+                }
+            }
             Divider()
             ScrollView(.horizontal) {
                 HStack {
