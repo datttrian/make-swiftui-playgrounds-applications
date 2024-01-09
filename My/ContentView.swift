@@ -10,7 +10,12 @@ import SwiftUI
 struct ContentView: View {
     
     func pizzaOrderText(size:PizzaSize) -> Text {
-        Text(size.rawValue + " " + selectedPizza.name + " Pizza")
+        if selectedPizza != nil {
+            return Text(size.rawValue + " " + selectedPizza!.name + " Pizza")
+        } else {
+            return Text("Select a Pizza")
+        }
+        
     }
     var menu = MenuModel().menu
     var bannerImage:String = surfgirl
@@ -18,7 +23,7 @@ struct ContentView: View {
     var title:String
     @State var isSmall:Bool = true
     @State var pizzaSize:PizzaSize = .small
-    @State var selectedPizza: MenuItem = testMenuItem1
+    @State var selectedPizza: MenuItem! = nil
     var body: some View {
         VStack {
             Text(title)
@@ -26,11 +31,20 @@ struct ContentView: View {
             pizzaOrderText(size: pizzaSize).font(isSmall ? .headline: .title3)
             
             if !isSmall {
-                Image("\(selectedPizza.id)_lg")
-                    .resizable()
-                    .scaledToFit()
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .padding(10)
+                if let pizza = selectedPizza {
+                    Image("\(pizza.id)_lg")
+                        .resizable()
+                        .scaledToFit()
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .padding(10)
+                } else {
+                    Image(bannerImage)
+                        .resizable()
+                        .scaledToFit()
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .padding(10)
+                }
+                
             }
             
             Button {
