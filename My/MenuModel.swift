@@ -11,6 +11,12 @@ struct MenuItem {
     var id:Int
     var name:String
     var price:Double
+    var imageName: String {
+        return "\(id).circle"
+    }
+    var formattedPrice:String {
+        price.formatted(.currency(code: "USD"))
+    }
 }
 
 let testMenuItem1 = MenuItem(id: 1, name: "Cheese", price: 7.00)

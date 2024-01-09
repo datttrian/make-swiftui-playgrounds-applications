@@ -13,7 +13,7 @@ struct VMenuItemView: View {
     var isTitle = false
     var body: some View {
         VStack {
-            Image(systemName: "\(item.id).circle")
+            Image(systemName: item.imageName)
                 .resizable()
                 .scaledToFit()
                 .frame(maxWidth: 150, maxHeight: 150)
@@ -25,6 +25,7 @@ struct VMenuItemView: View {
                     Text("Menu Description")
                         .font(.caption)
                 }
+                Text(item.formattedPrice)
             }
             Spacer()
         }
